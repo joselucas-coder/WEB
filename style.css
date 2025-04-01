@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');    
+    
+    body{
+        
+        background-color: #ffffff;
+        color: #000000;
+        transition: 0.3s ease-in-out;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+
+    .navtop{
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        margin: 1px;
+     
+        
+    }
+
+    .navtop a {
+    margin-top: 20px;
+    font-size: 19px;
+    all: unset;
+    }
+
+    .navtop a.debugnav{
+        margin-left: 50px;
+        font-size: 30px;
+    }
+
+    .navtop a.loginnav{
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        justify-content: center;
+        font-size: 20px;
+        background-color: #565de9;
+        padding: 10px;
+        height: 30px;
+        width: 80px;
+        border-radius: 10px;
+        
+    }   
+
+  
+    .input-container {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .barraPesquisa {
+        display: flex;
+        width: 250px;
+        padding: 10px;
+        padding-right: 35px; /* Espaço para o ícone */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #D4D4D4;
+        text-align: center;
+        font-family:'Michroma', sans-serif;
+        padding-left: 1px;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        outline: none;
+    }
+    
+    .search-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    
+    .funcionalidades{ 
+        display: flex;
+        gap: 50px;
+        align-items: baseline;
+        font-size: 20px;
+        font-family:'Michroma', sans-serif;
+    }
+
+
+    .blococentral {
+        width: 100%auto; /* Ajusta a largura */
+        height: 400px; /* Ajusta a altura para não ocupar tudo */
+        background: url('/assets/RGB\ roxo.png') no-repeat center center/cover;
+        border-radius: 15px; /* Bordas arredondadas */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+        display: flex;
+     
+        margin-top: 60px;
+       justify-content:space-between;
+    
+    }
+
+    .blococentral p{
+        display: flex;
+        font-size: 18px;
+        font-family: 'Fira Code', monospace;
+        background-color: #E3E3E3;
+        color: black;
+        margin-right: 100px;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 0 15px white; /* "Simula" uma borda branca */
+        width: 600px;
+        justify-content: center;
+        margin: 45px;
+       
+
+    }
+
+    .blococentral h1{
+        font-size: 45px;
+        padding: 40px;
+        padding-left: 60px;
+        font-family: 'Michroma', sans-serif;
+        font-weight: bold;
+    }
+
+    .infos{
+        display: flex;
+     
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 25px;
+        margin-top: 30px;
+        border-radius: 20px;
+    }
+
+
+    .infos h1{
+    
+    font-family: 'Michroma', sans-serif;
+    font-weight: 600;
+    }
+
+
+
+    .infos p{
+        margin-left: 25px;
+        font-size: 25px;
+        font-family: 'Michroma', sans-serif;
+    
+    }
+
+
+
+                            /* Pagina de Tutoriais*/
+
+    .blococentral_tutoriais{
+
+        width: 100%auto; /* Ajusta a largura */
+        height: 400px; /* Ajusta a altura para não ocupar tudo */
+        background: url('/assets/RGB\ roxo.png') no-repeat center center/cover;
+        border-radius: 15px; /* Bordas arredondadas */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+        display: flex;
+        color: white; /* Cor do texto */
+        margin-top: 60px;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+
+
+
+
+    .blococentral_tutoriais h1{
+        font-size: 45px;
+   
+        font-family: 'Michroma', sans-serif;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .blococentral_tutoriais p{
+        font-size: 20px;
+        font-family: 'Michroma', sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .Tutoriais{
+        
+        display: flex;
+        justify-content: space-between; /* Centraliza os elementos na horizontal */
+        align-items: center;
+        gap: 10px;
+        flex-direction: row;
+        margin-top: 70px;
+        font-family: 'Michroma', sans-serif;
+        
+  
+
+    }
+    
+    .Tutoriais img{
+        width: 330px;
+    }
+  
+    .Tutoriais h1{  
+        text-align: center;
+        font-size: 20px;
+        
+     
+    }
+
+    .dificuldade{
+        background-color: #C4F8BD;
+        width: 100px;
+        justify-content: center;
+        border-radius: 5px;
+        padding: 4px;
+
+    }
+
+    .Tutoriais p{
+        text-align: center;
+    
+        
+    }
+
+    .notas{
+       
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: auto;
+        align-items: center;
+    }
+
+    .dificuldade{
+        margin: 20px;
+    }
+    
+    .rating{
+        margin: 20px;
+        margin-left: 20px;
+    }
+
+
+    .tutorial_1{
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+     
+    }
+
+    .tutorial_2{
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+    }
+    .tutorial_3{
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+    }
+    .tutorial_4{
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+    }
+
+    
+
+
+    .botao{
+
+        display: flex;
+        background-color: #6079DF;
+        font-family: 'Michroma', sans-serif;
+        border-radius: 18px;
+        color: white;
+        padding: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 12px;
+        align-items: center;
+        gap: 10px;
+        margin: 24px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border: none;
+        outline: none;
+       
+        
+    }
+
+    .botao button{
+        border: none;
+        outline: none;
+        background-color: red;
+    }
+
+    .botao img{
+        width: 25px;
+        height: 20px;
+    }
+                                /*Pagina de Linguagens*/
+
+
+    .linguagens_disponiveis{
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+       text-align: center;
+       justify-content: center;
+        align-items: center;
+        font-family: 'Michroma', sans-serif;
+        margin-top: 40px;
+  
+    }                                    
+
+    .linguagens_disponiveis p{
+
+        color: #A39191;
+    }
+
+    .js{
+        background-color: #FFEBA9;
+        width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 35px;
+        margin: 20px;
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+
+    }
+
+    .py{
+
+        background-color: #D0D6FF;
+        width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 35px;
+        margin: 20px;
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+    }
+
+    .react{
+        background-color: #BEF3FF;
+        width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 35px;
+        margin: 20px;
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+
+    }
+
+    .type{
+
+        background-color: #ACD3FF;
+        width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 35px;
+        margin: 20px;      
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+    }
+
+    .node{
+        background-color: #C6EDBF;
+        width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 35px;
+        margin: 20px;
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+    }
+
+    .htmlcss{
+
+        background-color: #FFDBA9;
+        width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 35px;
+        margin: 20px;
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+    }
+
+    .java{
+        background-color: #FFC3C3;
+        width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 35px;
+        margin: 20px;
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+    }
+
+    .c{
+
+        background-color:#ECD7FF ;
+        width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        padding: 10px;
+        padding-top: 35px;
+        margin: 20px;
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+    }
+
+    .js h1, .py h1, .react h1, .type h1, 
+    .node h1, .htmlcss h1, .java h1, .c h1 {
+    font-size: 20px; /* Título */
+    }
+
+    .js p, .py p, .react p, .type p, 
+    .node p, .htmlcss p, .java p, .c p {
+    font-size: 15px; /* Texto menor */
+    }
+
+    .js, .py, .react, .type, 
+    .node, .htmlcss, .java, .c {
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+    }
+
+    .js:hover, .py:hover, .react:hover, .type:hover, 
+    .node:hover, .htmlcss:hover, .java:hover, .c:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona um sombreamento leve */
+    }
+    .js:active, .py:active, .react:active, .type:active, 
+    .node:active, .htmlcss:active, .java:active, .c:active {
+    transform: scale(0.98); /* Dá um leve "aperto" ao clicar */
+    }
+
+
+
+
+
+    #feedback-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+        justify-content: center;
+        max-width: 500px;
+        align-items: center;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+        font-family: "Fira Code", monospace;
+        margin: auto;
+        margin-top: 70px;
+        margin-bottom: 50px;
+      
+    }
+    
+    .feedback-card {
+        width: 300px;
+        height: 100px;
+        background: #ECECEC;
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex-grow: 1;
+        
+        
+    }
+    
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        
+    }
+    
+    
+    .profile-pic img{
+        display: flex;
+        width: 100%; /* Faz com que a imagem ocupe todo o espaço do container */
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    
+    
+        
+    }
+
+    /* 🌙 Tema Escuro */
+    .dark-mode {
+        background-color: #121212;
+        color: #ffffff; /* Cor do texto no tema escuro */
+    }
+
+    /* 🌟 Switch personalizado */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 25px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 4px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .slider {
+        background-color: #007bff;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(24px);
+    }
+
+
+   
+
+   
+    

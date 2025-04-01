@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap">
+        
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Debug.me</title>
+
+</head>
+<body>
+
+    
+    <nav class="navtop">
+
+        <div class="funcionalidades">
+        <a href="index.html" class="debugnav">Debug.me</a>
+        <a href="docs.html" class="docsnav">Home</a>
+        <a href="tutoriais.html" class="aprendernav">Tutoriais</a>
+        <a href="linguagens.html" class="ferramentasnav">Linguagens</a>
+        <a href="feedbacks.html" class="trilhanav">Feedbacks</a>
+
+
+        <label class="switch">
+            <input type="checkbox" id="toggleTheme">
+            <span class="slider"></span>
+        </label>
+            
+        <div class="input-container">
+            <input class="barraPesquisa" type="search" placeholder="Procurar tutoriais">
+            <img src="assets/lupa.png" class="search-icon">
+        </div>
+
+       
+       
+        <a href="#" class="loginnav">Login</a>
+        </div>
+
+       
+
+   
+       
+    </div>
+       
+    </nav>
+    
+    <div class="blococentral">
+
+        <h1>Aprenda a <br> programar mais <br>  rápido com <br> nossos tutoriais</h1>
+    
+           <p>function aprenderAProgramar() {<br>
+                const habilidades = [];<br>
+                const dedicacao = true;<br>
+            while (dedicacao) {<br>
+                const novaHabilidade = encontrarTutorial();<br>
+                habilidades.push(novaHabilidade);<br>
+                praticar(novaHabilidade);<br>
+            }<br>
+            return habilidades;<br>
+        }<br>
+        // Comece sua jornada hoje<br>
+        aprenderAProgramar()
+    
+            </p>
+
+
+    </div>
+    
+    <div class="infos">
+
+        <h1>Sobre o  Debug.me</h1>
+        <p>
+            O Debug.me nasceu com a missão de tornar o aprendizado de programação mais acessível e eficiente. Sabemos que muitas pessoas enfrentam dificuldades ao iniciar sua jornada no mundo do código, seja por falta de orientação ou pela complexidade dos materiais disponíveis.
+            <br>Aqui, você encontra uma plataforma estruturada para facilitar seu desenvolvimento:<br>
+            •Tutoriais 📚 – Aprenda passo a passo com conteúdos bem organizados, desenvolvidos para acelerar seu aprendizado.<br>
+            •Linguagens 💻 – Explore diferentes linguagens de programação e descubra qual se adapta melhor às suas necessidades.<br>
+            •Feedbacks 🔄 – Compartilhe sua experiência e aprenda com a comunidade, melhorando cada vez mais suas habilidades.
+        </p>
+
+    </div>
+
+    <script>
+
+const toggle = document.getElementById("toggleTheme");
+
+// Verifica o estado salvo no localStorage
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggle.checked = true;
+}
+
+// Alterna o tema ao clicar no switch
+toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+});
+
+    </script>
+
+
+        
+    
+</body>
+</html>
