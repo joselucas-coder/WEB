@@ -177,6 +177,69 @@
     }
 
 
+    .blococentral_tutoriaisjs{
+
+        width: 100%auto; /* Ajusta a largura */
+        height: 400px; /* Ajusta a altura para não ocupar tudo */
+        background: url('/assets/RGB\ roxo.png') no-repeat center center/cover;
+        border-radius: 15px; /* Bordas arredondadas */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+        display: flex;
+        color: white; /* Cor do texto */
+        margin-top: 60px;
+        justify-content:center;
+        align-items: center;
+        flex-direction: row;
+        gap: 35px;
+
+
+
+    }
+
+
+
+
+    .blococentral_tutoriaisjs h1{
+        font-size: 45px;
+   
+        font-family: 'Michroma', sans-serif;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .blococentral_tutoriaisjs p{
+        font-size: 20px;
+        font-family: 'Michroma', sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+
+    .textoTutorial_js{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 6px;
+        margin-top: 30px;
+        border-radius: 20px;
+    }
+
+
+    
+    
+    
+        .textoTutorial_js p{
+            margin-left: 25px;
+            font-size: 18px;
+            font-family: 'Michroma', sans-serif;
+          
+        
+        }
+    
+
+
+
 
 
     .blococentral_tutoriais h1{
@@ -571,8 +634,35 @@
         transform: translateX(24px);
     }
 
+    .CodeMirror {
+        font-family: 'Fira Code', monospace;
+        font-size: 18px;
+        border-radius: 15px;
+        background-color: #1e1e1e;
+        color: #fff;
+        padding: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        width: 600px;
+        height: 300;
+        justify-content: right;
+        margin-top: 40px;
+        margin-right: 50px;
+        transition: opacity 0.5s ease-in-out;
+    }
+   /* Cursor piscando azul */
+.CodeMirror-cursor {
+    border-left: 2px solid #00bcd4 !important;
+}
 
-   
+/* Cor da linha ativa */
+.CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Barra de rolagem */
+.CodeMirror::-webkit-scrollbar {
+    width: 8px;
+}
 
    
     
