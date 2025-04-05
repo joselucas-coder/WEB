@@ -8,7 +8,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap">
         
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
     <title>Debug.me</title>
@@ -35,30 +37,109 @@
         </div>
     </nav>
     
-    <div class="blococentral_tutoriaisjs">
-
-        <img src="/assets/js.png" alt="">
-        <h1>JavaScript - Iniciante</h1>
-        
-        
-    </div>
     
-    
+    <!-- Banner -->
+        <div class="blococentral_tutoriaisjs">
+            <img src="/assets/js.png" alt="">
+            <h1>JavaScript - Iniciante</h1>
+        </div>
+  
+  <!-- Container com sidebar + conteúdo -->
+  <div class="container_tutorial">
+  
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="#">Introdução</a></li>
+        <li><a href="#">POO</a></li>
+        <li><a href="#">História</a></li>
+        <li><a href="#">Vantagens</a></li>
+        <li><a href="#">Variáveis</a></li>
+        <li><a href="#">Funções</a></li>
+        <li><a href="#">Objetos</a></li>
+      </ul>
+    </aside>
+  
+    <!-- Texto -->
     <div class="textoTutorial_js">
 
 
-        <p>Lorem ipsum dolor sit amet. Est optio incidunt ut adipisci fugiat et molestiae soluta sit iusto quisquam. Ut pariatur rerum quo praesentium iusto ea consequuntur vitae est sapiente rerum est perspiciatis assumenda et obcaecati velit ut commodi alias.</p>
+        <p>A Programação Orientada a Objetos (POO) é um paradigma que estrutura o código em torno de objetos. Objetos constituem entidades que encapsulam tanto dados quanto funções, comumente designadas como métodos. A proposta consiste em representar conceitos do mundo real mediante software, desenvolvendo entidades que possuem características (dados) e funcionalidades (ações). Há certos princípios fundamentais da Programação Orientada a Objetos, dentre os quais se destaca o encapsulamento: uma prática que reúne dados e funcionalidades em uma única entidade, o objeto. O acesso às informações pode ser regulamentado para salvaguardar a integridade do objeto.</p>
 
-            <p> aperiam officiis qui fugit nobis qui vitae iusto. Ut consequuntur molestiae eum magnam culpa cum similique magnam ea dolorem molestiae. Sed reprehenderit dignissimos sit facere soluta in cupiditate omnis? Aut explicabo nesciunt et eligendi doloremque cum unde quidem hic voluptatem optio et dolores laborum et quasi ipsam et eveniet molestiae.</p>
+        <p> Herança: Possibilita que um objeto "herde" as características e métodos de outro, promovendo assim a reutilização eficiente de código. Polimorfismo: A habilidade de distintos objetos reagirem de forma diversa a um mesmo método ou função. Abstração: Oculta informações complexas, apresentando apenas os elementos essenciais para o usuário do objeto.</p>
             
-            <p> Et omnis accusantium in voluptatem galisum quo accusamus enim non voluptatem iusto aut consequatur dolor in esse eius. Qui aspernatur animi qui accusamus doloribus sit officia facere sed asperiores adipisci ab nemo voluptatem id temporibus enim qui officiis consectetur. Rem quaerat commodi in inventore nihil eum numquam nobis in nesciunt amet sit sapiente provident.</p>
+        <p> JavaScript foi desenvolvido por Brendan Eich em 1995, durante seu período na Netscape. Originalmente designada como Mocha e posteriormente como LiveScript, a linguagem foi renomeada para JavaScript com o intuito de capitalizar sobre a popularidade da linguagem Java. Em 1996, o JavaScript foi formalmente padronizado pela ECMA International sob a designação ECMAScript.</p>
             
-            <p>Eos voluptas reprehenderit 33 itaque dolores et deserunt dolorem et ratione enim id earum ullam nam recusandae earum est officia iure. Sed temporibus dolorem ea galisum reprehenderit eos quas molestiae est internos molestiae et quos inventore sed doloremque tempora non esse provident.</p>
-        </p>
+        <p>Com o passar do tempo, a criação de sites dinâmicos tornou-se imprescindível, particularmente com a introdução do Ajax em 2005. Nos anos subsequentes, com a introdução do motor V8 e a adoção do ECMAScript 6 (ES6) em 2015, a linguagem evoluiu significativamente, incorporando novas funcionalidades como classes e promessas. Atualmente, JavaScript é reconhecida como uma das linguagens mais proeminentes, sendo amplamente utilizada tanto no front-end quanto no back-end (por meio do Node.js) e em aplicações móveis.</p>
+
+        <p>Vantagens: Desenvolvimento Front-End (Web): O JavaScript se destaca como a linguagem predominante para a incorporação de interatividade em páginas web. Em conjunção com HTML e CSS, possibilita a construção de sites dinâmicos e responsivos, abrangendo recursos como animações, validação de formulários e atualizações de conteúdo sem a necessidade de recarregar a página.</p>
+        
+        <p>Desenvolvimento Back-End (Servidor): Através do Node.js, o JavaScript torna-se uma ferramenta viável para a programação do lado do servidor, permitindo que os desenvolvedores utilizem uma única linguagem tanto no front-end quanto no back-end, facilitando a criação de aplicações web integradas e coesas.</p>
+
+        <p>Desenvolvimento de Aplicativos Móveis: Frameworks como React Native possibilitam a criação de aplicativos nativos para iOS e Android utilizando JavaScript.</p>
+
+        <p>Desenvolvimento de Jogos: Aplicado em jogos para a web, empregando bibliotecas como Phaser.js, que possibilitam a criação de jogos 2D diretamente no navegador.</p>
+
+        <p>Desenvolvimento de Aplicativos para Desktop: Ferramentas como Electron possibilitam a criação de aplicações de desktop multiplataforma (Windows, Mac, Linux) utilizando JavaScript, HTML e CSS.</p>
+
+        <p>Automação e Ferramentas de Desenvolvimento: O JavaScript desempenha um papel preponderante na automação de tarefas, no desenvolvimento de ferramentas de linha de comando e na manipulação de arquivos e sistemas de arquivos, especialmente por meio do Node.js.</p>
+
+        <p>Principais características: o JavaScript tem suporte a programação orientada a objetos (POO), mas de uma maneira um pouco diferente de linguagens como Java ou C#. Para entender melhor, vamos primeiro explicar o que significa orientação a objetos e como isso se aplica ao JavaScript.</p>
+
+        <p>No JavaScript, a orientação a objetos pode ser feita de duas formas principais: funções construtoras e protótipos (em versões mais antigas de JavaScript). a sintaxe de classe (a partir do ECMAScript 6 - ES6), que facilita o uso de POO.</p>
+
+        <p>Funções Construtoras e Protótipos
+        Classes (ES6)</p>
+        
+        <p>Declaração de Variáveis
+        JavaScript oferece três formas de declarar variáveis: var, let e const.
+        var: Usado no passado, mas com comportamento peculiar (hoisting). Não é recomendado no uso moderno.
+        let: Declara variáveis com escopo de bloco, ideal para valores que podem ser alterados.
+        const: Declara variáveis cujo valor não pode ser alterado após a atribuição.</p>
+
+        <p>Tipos de Dados
+        JavaScript tem tipos de dados primitivos e objetos:
+        Primitivos: string, number, boolean, null, undefined, symbol, bigint.
+        Objetos: Arrays, objetos literais, funções, etc.</p>
+
+        <p>Operadores
+        Aritméticos: +, -, *, /, %
+        Comparação: ==, ===, !=, >, <, >=, <=
+        Lógicos: && (E), || (OU), ! (NÃO)
+        Atribuição: =, +=, -=, *=, /=
+        Incremento e Decremento: ++, --</p>
+
+        <p>Estruturas de Controle
+        Condicionais (if-else): Permite executar diferentes blocos de código com base em condições.
+        Switch: Útil quando temos várias condições possíveis.
+        Laços de repetição:
+        for: Usado para executar um bloco de código repetidamente.
+        while: Executa enquanto a condição for verdadeira.
+        do...while: Executa pelo menos uma vez antes de testar a condição.</p>
+
+        <p>Funções
+        As funções são blocos de código que podem ser chamados e reutilizados.
+        Declaração de função:
+        Funções anônimas (usadas principalmente em expressões ou callbacks):
+        Arrow Functions (funções mais curtas e com uma sintaxe diferente):</p>
+
+        <p>Objetos
+        Objetos são estruturas que contêm pares chave-valor.</p>
     </div>
+  
+  </div>
+    
+    
 
 <script>       </script>
     <script src="theme.js"></script>
 
     <script src="script.js"></script>
 </body> 
+
+
+
+
+
+  
