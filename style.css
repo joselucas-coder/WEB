@@ -699,49 +699,125 @@ body.dark-mode .funcionalidades a:hover {
 }
 
 
-.container_tutorial {
-    display: flex;
-    flex-direction: row;
+.layout-container {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 80px; /* distância do topo ao rolar */
+  align-self: start;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  color: black;
+  background-color: #f5f5f5;
+  color: #1e1e1e;
+  
+
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.sidebar-direita {
+    position: sticky;
+    top: 80px; /* distância do topo ao rolar */
+    align-self: start;
+    height: fit-content;
     padding: 20px;
-    gap: 20px;
-  }
-  
-  .sidebar {
-    width: 250px;
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-   
-  }
-  
-  .sidebar h2 {
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    color: black;
+    background-color: #f5f5f5;
+    color: #1e1e1e;
     
+}
+
+.conteudo {
+  max-width: 800px;
+  line-height: 1.7;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.textoTutorial_js p {
+  margin-bottom: 16px;
+}
+
+/* Tema escuro */
+body.dark-mode .sidebar {
+    background-color: #292929;
+    color: #E0E0E0;
   }
   
-  .sidebar li {
-    margin-bottom: 10px;
-    
+  body.dark-mode .sidebar a {
+    color: #CCCCCC;
   }
   
-  .sidebar a {
-    color: #ccc;
-    text-decoration: none;
+  body.dark-mode .sidebar a:hover {
+    color: #00ffc6;
   }
   
-  .sidebar a:hover {
-    color: white;
+  
+  /* Tema claro */
+  body.light-theme .sidebar {
+    background-color: #f0f0f0;
+    color: #1e1e1e;
   }
   
-  .textoTutorial_js {
-    flex: 1;
-    padding: 10px;
+  body.light-theme .sidebar a {
+    color: #333;
   }
-      
+  
+  body.light-theme .sidebar a:hover {
+    color: #007acc;
+  }
+
+  /* Tema escuro */
+body.dark-mode .sidebar-direita {
+    background-color: #292929;
+    color: #E0E0E0;
+  }
+  
+  body.dark-mode .sidebar-direita a {
+    color: #CCCCCC;
+  }
+  
+  body.dark-mode .sidebar-direita a:hover {
+    color: #00ffc6;
+  }
+  
+  
+  /* Tema claro */
+  body.light-theme .sidebar-direita {
+    background-color: #f0f0f0;
+    color: #1e1e1e;
+  }
+  
+  body.light-theme .sidebar-direita a {
+    color: #333;
+  }
+  
+  body.light-theme .sidebar-direita a:hover {
+    color: #007acc;
+  }
