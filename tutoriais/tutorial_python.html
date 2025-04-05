@@ -9,34 +9,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap">
         
 
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Debug.me</title>
 
 </head>
 <body>
 
-
     <nav class="navtop">
-
         <div class="funcionalidades">
-        <a href="index.html" class="debugnav">Debug.me</a>
-        <a href="docs.html" class="docsnav">Home</a>
-        <a href="tutoriais.html" class="aprendernav">Tutoriais</a>
-        <a href="linguagens.html" >Linguagens</a>
-        <a href="feedbacks.html" class="trilhanav">Feedbacks</a>
+            <a href="../index.html" class="debugnav">Debug.me</a>
+            <a href="../docs.html" class="docsnav">Home</a>
+            <a href="../tutoriais.html" class="aprendernav">Tutoriais</a>
+            <a href="../linguagens.html" class="ferramentasnav">Linguagens</a>
+            <a href="../feedbacks.html" class="trilhanav">Feedbacks</a>
+            <label class="switch">
+                <input type="checkbox" id="toggleTheme">
+                <span class="slider"></span>
+            </label>
+            <div class="input-container">
+                <input class="barraPesquisa" type="search" placeholder="Procurar tutoriais">
+                <img src="assets/lupa.png" class="search-icon">
+            </div>
+            <a href="#" class="loginnav">Login</a>
         </div>
-      
-    </div>
-       
-
     </nav>
     
     <div class="blococentral_tutoriaisjs">
 
         <img src="/assets/js.png" alt="">
         <h1>JavaScript - Iniciante</h1>
-
+        
+        
     </div>
     
     
@@ -53,7 +56,8 @@
         </p>
     </div>
 
-
+<script>       </script>
+    <script src="theme.js"></script>
 
     <script src="script.js"></script>
 </body> 

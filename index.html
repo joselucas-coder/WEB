@@ -49,17 +49,26 @@
             •Feedbacks 🔄 – Compartilhe sua experiência e aprenda com a comunidade, melhorando cada vez mais suas habilidades.
         </p>
     </div>
-    
+   
     <script>
+         document.addEventListener("DOMContentLoaded", () => {
         const toggle = document.getElementById("toggleTheme");
-        if (localStorage.getItem("theme") === "dark") {
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
             document.body.classList.add("dark-mode");
-            toggle.checked = true;
         }
-        toggle.addEventListener("change", () => {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
-        });
+
+        if (toggle) {
+            toggle.checked = document.body.classList.contains("dark-mode");
+
+            toggle.addEventListener("change", () => {
+                document.body.classList.toggle("dark-mode");
+                const newTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+                localStorage.setItem("theme", newTheme);
+            });
+        }
+    });
         
         const codeSnippets = [
             `function aprenderAProgramar() {\n    const habilidades = [];\n    const dedicacao = true;\n    while (dedicacao) {\n        const novaHabilidade = encontrarTutorial();\n        habilidades.push(novaHabilidade);\n        praticar(novaHabilidade);\n    }\n    return habilidades;\n}\n// Comece sua jornada hoje\naprenderAProgramar();`,
@@ -81,6 +90,12 @@
         }
         setInterval(trocarCodigo, 1700);
         trocarCodigo();
+
+     
+
     </script>
+
+
+
 </body>
 </html>

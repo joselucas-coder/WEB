@@ -87,7 +87,41 @@
         align-items: baseline;
         font-size: 20px;
         font-family:'Michroma', sans-serif;
+        cursor: pointer; /* Faz o mouse virar uma mãozinha */
     }
+
+    .funcionalidades a:hover {
+     
+     
+        text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.8); /* Adiciona brilho ao texto */
+        transform: scale(1.00); /* Dá um leve zoom */
+    }
+
+    .funcionalidades a {
+
+        
+        text-decoration: none;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    /* Efeito ao passar o mouse - MODO CLARO */
+body:not(.dark-mode) .funcionalidades a:hover {
+    color: #000000;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8); /* Brilho azul */
+    transform: scale(1.00);
+}
+
+/* Efeito ao passar o mouse - MODO ESCURO */
+body.dark-mode .funcionalidades a:hover {
+    color: #ffcc00;
+    text-shadow: 0px 0px 1px rgba(255, 204, 0, 0.8); /* Brilho amarelo */
+    transform: scale(1.00);
+}
+
+
+
 
 
     .blococentral {
@@ -539,6 +573,7 @@
         margin: auto;
         margin-top: 70px;
         margin-bottom: 50px;
+        color:black;
       
     }
     
@@ -664,5 +699,5 @@
     width: 8px;
 }
 
-   
+
     

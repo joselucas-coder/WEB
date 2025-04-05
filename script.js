@@ -47,6 +47,6 @@ function atualizarGrid() {
 }
 
 atualizarGrid();
-setInterval(atualizarGrid, 5000); // Troca os grids a cada 5 segundos
+setInterval(atualizarGrid, 4000); // Troca os grids a cada 5 segundos
     
 

@@ -18,17 +18,22 @@
 
 
     <nav class="navtop">
-
         <div class="funcionalidades">
-        <a href="index.html" class="debugnav">Debug.me</a>
-        <a href="docs.html" class="docsnav">Home</a>
-        <a href="tutoriais.html" class="aprendernav">Tutoriais</a>
-        <a href="linguagens.html" >Linguagens</a>
-        <a href="feedbacks.html" class="trilhanav">Feedbacks</a>
+            <a href="index.html" class="debugnav">Debug.me</a>
+            <a href="docs.html" class="docsnav">Home</a>
+            <a href="tutoriais.html" class="aprendernav">Tutoriais</a>
+            <a href="linguagens.html" class="ferramentasnav">Linguagens</a>
+            <a href="feedbacks.html" class="trilhanav">Feedbacks</a>
+            <label class="switch">
+                <input type="checkbox" id="toggleTheme">
+                <span class="slider"></span>
+            </label>
+            <div class="input-container">
+                <input class="barraPesquisa" type="search" placeholder="Procurar tutoriais">
+                <img src="assets/lupa.png" class="search-icon">
+            </div>
+            <a href="#" class="loginnav">Login</a>
         </div>
-      
-    </div>
-       
     </nav>
     
     <div class="blococentral_tutoriais">
@@ -43,7 +48,7 @@
     <div class="linguagens_disponiveis">
 
 
-        <a class="js" href="tutorial_js.html">
+        <a class="js" href="/tutoriais/tutorial_js.html">
 
             <img src="assets/js.png" alt="logoJS" width="117" height="117">
             <h1>JavaScript</h1>
@@ -51,49 +56,49 @@
 
         </a>
 
-        <a class="py" href="">
+        <a class="py" href="/tutoriais/tutorial_python.html">
 
             <img src="assets/py.png" alt="logoJS" width="117" height="117">
             <h1>Python</h1>
             <p>189 tutoriais</p>
 
         </a>
-        <a class="react" href="">
+        <a class="react" href="/tutoriais/tutorial_react.html">
 
             <img src="assets/react.png" alt="logoJS" width="120" height="117">
             <h1>React</h1>
             <p>156 tutoriais</p>
 
         </a>
-        <a class="type" href="">
+        <a class="type" href="/tutoriais/tutorial_type.html">
 
             <img src="assets/type.png" alt="logoJS" width="117" height="117">
             <h1>TypeScript</h1>
             <p>134 tutoriais</p>
 
         </a>
-        <a class="node" href="">
+        <a class="node" href="/tutoriais/tutorial_node.html">
 
             <img src="assets/node.png" alt="logoJS" width="117" height="117">
             <h1>Node</h1>
             <p>112 tutoriais</p>
 
         </a>
-        <a class="htmlcss" href="">
+        <a class="htmlcss" href="/tutoriais/tutorial_html_e_css.html">
 
             <img src="assets/html.png" alt="logoJS" width="117" height="117">
             <h1>HTML e CSS</h1>
             <p>129 turoriais</p>
 
         </a>
-        <a class="java" href="">
+        <a class="java" href="/tutoriais/tutorial_java.html">
 
             <img src="assets/logos_java.png" alt="logoJS" width="117" height="117">
             <h1>Java</h1>
             <p>87 tutoriais</p>
 
         </a>
-        <a class="c" href="">
+        <a class="c" href="/tutoriais/tutorial_c.html">
 
             <img src="assets/c.png" alt="logoJS" width="117" height="117">
             <h1>C#</h1>
@@ -102,6 +107,18 @@
         </a>
 
     </div>
-
+    <script src="theme.js"></script>
+        <script>        // Destacar link da página atual
+            const links = document.querySelectorAll(".navtop a");
+            const currentPage = window.location.pathname.split("/").pop();
+            
+            links.forEach(link => {
+                const href = link.getAttribute("href");
+            
+                if (href === currentPage || (href === "index.html" && currentPage === "")) {
+                    link.classList.add("ativo");
+                }
+            
+            });</script>
     
     </body>
