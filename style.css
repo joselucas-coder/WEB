@@ -125,15 +125,15 @@ body.dark-mode .funcionalidades a:hover {
 
 
     .blococentral {
-        width: 100%auto; /* Ajusta a largura */
-        height: 400px; /* Ajusta a altura para não ocupar tudo */
-        background: url('/assets/RGB\ roxo.png') no-repeat center center/cover;
-        border-radius: 15px; /* Bordas arredondadas */
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
-        display: flex;
-     
-        margin-top: 60px;
-       justify-content:space-between;
+      position: relative; /* essencial pra z-index funcionar */
+      width: 100%;
+      height: 400px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+      overflow: hidden; /* garante que os blobs não ultrapassem */
     
     }
 
@@ -750,6 +750,7 @@ body.dark-mode .funcionalidades a:hover {
     color: black;
     background-color: #f5f5f5;
     color: #1e1e1e;
+   
     
 }
 
@@ -821,3 +822,233 @@ body.dark-mode .sidebar-direita {
   body.light-theme .sidebar-direita a:hover {
     color: #007acc;
   }
+
+
+ /* Modal base (supondo que você já tenha algo assim) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Nova estrutura visual dentro do modal */
+  .login-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 900px;
+    max-width: 100%;
+    margin: 60px auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Botão de fechar */
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Painel esquerdo */
+  .left-panel {
+    background-color: #f3f3f3;
+    width: 45%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-panel h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .icon-placeholder {
+    font-size: 80px;
+    margin: 20px 0;
+  }
+  
+  .register-text {
+    margin-top: auto;
+    font-size: 14px;
+  }
+  
+  .register-text a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* Painel direito */
+  .right-panel {
+    padding: 40px;
+    width: 55%;
+  }
+  
+  .right-panel h2 {
+    margin-bottom: 20px;
+  }
+  
+  .modal-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .modal-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .remember {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .forgot-password {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    text-decoration: underline;
+  }
+  
+  .social-login {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .social-buttons button {
+    margin: 5px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .google { color: #000; }
+  .facebook { color: #3b5998; }
+  .twitter { color: #1da1f2; }
+  
+  .blob-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: blur(100px);
+  z-index: 0;
+  animation: colorShift 20s ease-in-out infinite alternate;
+}
+
+/* Animação de cor */
+@keyframes colorShift {
+  0%   { background-color: rgba(255, 0, 150, 0.5); }
+  25%  { background-color: rgba(0, 200, 255, 0.5); }
+  50%  { background-color: rgba(0, 255, 150, 0.5); }
+  75%  { background-color: rgba(255, 255, 0, 0.5); }
+  100% { background-color: rgba(255, 0, 149, 0.61); }
+}
+
+/* Animações diferentes (mais rápidas e agitadas) */
+.blob:nth-child(1) {
+  animation: float1 8s ease-in-out infinite alternate;
+}
+.blob:nth-child(2) {
+  animation: float2 7s ease-in-out infinite alternate;
+}
+.blob:nth-child(3) {
+  animation: float3 9s ease-in-out infinite alternate;
+}
+.blob:nth-child(4) {
+  animation: float4 8.5s ease-in-out infinite alternate;
+}
+.blob:nth-child(5) {
+  animation: float5 7.2s ease-in-out infinite alternate;
+}
+.blob:nth-child(6) {
+  animation: float6 6.8s ease-in-out infinite alternate;
+}
+
+@keyframes float1 {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  25%  { transform: translate(80px, -100px) scale(1.1) rotate(5deg); }
+  50%  { transform: translate(-60px, 90px) scale(1.05) rotate(-5deg); }
+  75%  { transform: translate(70px, 60px) scale(1.1) rotate(8deg); }
+  100% { transform: translate(-90px, -80px) scale(1.15) rotate(-8deg); }
+}
+
+@keyframes float2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-100px, 80px) scale(1.12); }
+  100% { transform: translate(90px, -70px) scale(1.08); }
+}
+
+@keyframes float3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(110px, 60px) scale(1.1); }
+  66%  { transform: translate(-80px, -70px) scale(1.08); }
+  100% { transform: translate(100px, 90px) scale(1.12); }
+}
+
+@keyframes float4 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(-100px, -90px) scale(1.1); }
+  50%  { transform: translate(100px, 70px) scale(1.05); }
+  75%  { transform: translate(-70px, 90px) scale(1.1); }
+  100% { transform: translate(90px, -100px) scale(1.15); }
+}
+
+@keyframes float5 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(100px, -100px) scale(1.15); }
+  100% { transform: translate(-90px, 80px) scale(1.08); }
+}
+
+@keyframes float6 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(-80px, 70px) scale(1.08); }
+  50%  { transform: translate(90px, -90px) scale(1.12); }
+  75%  { transform: translate(-100px, 90px) scale(1.1); }
+  100% { transform: translate(100px, -90px) scale(1.12); }
+}
+
+/* Garante que o conteúdo fique acima dos blobs */
+.blococentral > h1,
+.blococentral > #codeArea {
+    z-index: 1;
+    position: relative;
+}

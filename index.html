@@ -30,11 +30,21 @@
                 <input class="barraPesquisa" type="search" placeholder="Procurar tutoriais">
                 <img src="assets/lupa.png" class="search-icon">
             </div>
-            <a href="#" class="loginnav">Login</a>
+            <a href="modaLogin.html" class="loginnav" id="openModal">Login</a>
         </div>
     </nav>
     
     <div class="blococentral">
+        <div class="blob-container">
+            <div class="blob" style="background: #2076ff; top: -100px; left: -100px;"></div>
+            <div class="blob" style="background: #6b8bfa; top: 150px; left: 50%; transform: translateX(-50%);"></div>
+            <div class="blob" style="background: #5848d5; top: -80px; right: -100px;"></div>
+            <div class="blob" style="background: #7700ff; bottom: -100px; left: -120px;"></div>
+            <div class="blob" style="background: #9a4dff; bottom: 150px; right: -90px;"></div>
+            <div class="blob" style="background: #00c3ff; top: 30%; left: -150px;"></div>
+                
+         
+            </div>
         <h1>Aprenda a <br> programar mais <br> rápido com <br> nossos tutoriais</h1>
         <textarea id="codeArea"></textarea>
     </div>
@@ -50,52 +60,109 @@
         </p>
     </div>
    
-    <script>
-         document.addEventListener("DOMContentLoaded", () => {
-        const toggle = document.getElementById("toggleTheme");
-
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "dark") {
-            document.body.classList.add("dark-mode");
-        }
-
-        if (toggle) {
-            toggle.checked = document.body.classList.contains("dark-mode");
-
-            toggle.addEventListener("change", () => {
-                document.body.classList.toggle("dark-mode");
-                const newTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
-                localStorage.setItem("theme", newTheme);
-            });
-        }
-    });
-        
-        const codeSnippets = [
-            `function aprenderAProgramar() {\n    const habilidades = [];\n    const dedicacao = true;\n    while (dedicacao) {\n        const novaHabilidade = encontrarTutorial();\n        habilidades.push(novaHabilidade);\n        praticar(novaHabilidade);\n    }\n    return habilidades;\n}\n// Comece sua jornada hoje\naprenderAProgramar();`,
-            `const debug = () => {\n    console.log("Depuração ativa!");\n};\ndebug();`,
-            `class Desenvolvedor {\n    constructor(nome) {\n        this.nome = nome;\n    }\n    programar() {\n        console.log(\`\${this.nome} está programando...\`);\n    }\n}\nconst dev = new Desenvolvedor("João");\ndev.programar();`
-        ];
-        
-        const editor = CodeMirror.fromTextArea(document.getElementById("codeArea"), {
-            mode: "javascript",
-            lineNumbers: true,
-            theme: "default",
-            readOnly: true
-        });
-        
-        let index = 0;
-        function trocarCodigo() {
-            editor.setValue(codeSnippets[index]);
-            index = (index + 1) % codeSnippets.length;
-        }
-        setInterval(trocarCodigo, 1700);
-        trocarCodigo();
-
-     
-
-    </script>
+   
 
 
 
+
+    <div id="modalLogin" class="modal">
+        <div class="modal-content login-container">
+          <span class="close-button">&times;</span>
+      
+          <div class="left-panel">
+            <h1>Welcome!</h1>
+            <div class="icon-placeholder">🙂</div>
+            <p class="register-text">Not a member yet? <a href="#">Register now</a></p>
+          </div>
+      
+          <div class="right-panel">
+            <h2>Log in</h2>
+            <input type="text" placeholder="Usuário" class="modal-input">
+            <input type="password" placeholder="Senha" class="modal-input">
+      
+            <div class="remember">
+              <input type="checkbox" id="keep-logged">
+              <label for="keep-logged">Manter-me conectado</label>
+            </div>
+      
+            <button class="modal-btn">Entrar</button>
+            <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+      
+            <div class="social-login">
+              <p>Ou entre com</p>
+              <div class="social-buttons">
+                <button class="google">G Google</button>
+                <button class="facebook">f Facebook</button>
+                <button class="twitter">X Twitter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+   const toggle = document.getElementById("toggleTheme");
+
+   const savedTheme = localStorage.getItem("theme");
+   if (savedTheme === "dark") {
+       document.body.classList.add("dark-mode");
+   }
+
+   if (toggle) {
+       toggle.checked = document.body.classList.contains("dark-mode");
+
+       toggle.addEventListener("change", () => {
+           document.body.classList.toggle("dark-mode");
+           const newTheme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+           localStorage.setItem("theme", newTheme);
+       });
+   }
+});
+   
+   const codeSnippets = [
+       `function aprenderAProgramar() {\n    const habilidades = [];\n    const dedicacao = true;\n    while (dedicacao) {\n        const novaHabilidade = encontrarTutorial();\n        habilidades.push(novaHabilidade);\n        praticar(novaHabilidade);\n    }\n    return habilidades;\n}\n// Comece sua jornada hoje\naprenderAProgramar();`,
+       `const debug = () => {\n    console.log("Depuração ativa!");\n};\ndebug();`,
+       `class Desenvolvedor {\n    constructor(nome) {\n        this.nome = nome;\n    }\n    programar() {\n        console.log(\`\${this.nome} está programando...\`);\n    }\n}\nconst dev = new Desenvolvedor("João");\ndev.programar();`
+   ];
+   
+   const editor = CodeMirror.fromTextArea(document.getElementById("codeArea"), {
+       mode: "javascript",
+       lineNumbers: true,
+       theme: "default",
+       readOnly: true
+   });
+   
+   let index = 0;
+   function trocarCodigo() {
+       editor.setValue(codeSnippets[index]);
+       index = (index + 1) % codeSnippets.length;
+   }
+   setInterval(trocarCodigo, 1700);
+   trocarCodigo();
+
+   document.getElementById("openModal").addEventListener("click", function(event) {
+event.preventDefault(); // Impede que o link te leve pra outra página
+document.getElementById("modalLogin").style.display = "block";
+});
+
+// Fecha o modal ao clicar no "X"
+document.querySelector(".close-button").addEventListener("click", function() {
+document.getElementById("modalLogin").style.display = "none";
+});
+
+window.addEventListener("click", function(event) {
+if (event.target === document.getElementById("modalLogin")) {
+   document.getElementById("modalLogin").style.display = "none";
+}
+});
+
+
+</script>
+
+
+  
 </body>
 </html>
