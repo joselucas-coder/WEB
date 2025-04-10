@@ -63,39 +63,40 @@
 
 
 
+    <!-- MODAL DE LOGIN -->
     <div id="modalLogin" class="modal">
         <div class="modal-content login-container">
           <span class="close-button">&times;</span>
       
           <div class="left-panel">
             <h1 class="titulobemvindo">Bem-Vindo!</h1>
-            <div class="icon-placeholder">Debug.me </div>
-            <p class="register-text">Ainda não é um membro ? <a href="#">Entre agora!</a></p>
+            <div class="icon-placeholder">Debug.me</div>
+            <p class="register-text">Já tem uma conta? <a href="#">Entrar</a></p>
+      
             <div class="blob-container">
-                <div class="blob" style="background: #2076ff; top: -100px; left: -100px;"></div>
-                <div class="blob" style="background: #6b8bfa; top: 150px; left: 50%; transform: translateX(-50%);"></div>
-                <div class="blob" style="background: #5848d5; top: -80px; right: -100px;"></div>
-                <div class="blob" style="background: #7700ff; bottom: -100px; left: -120px;"></div>
-                <div class="blob" style="background: #9a4dff; bottom: 150px; right: -90px;"></div>
-                <div class="blob" style="background: #00c3ff; top: 30%; left: -150px;"></div>
-                </div>
+              <div class="blob" style="background: #2076ff; top: -100px; left: -100px;"></div>
+              <div class="blob" style="background: #6b8bfa; top: 150px; left: 50%; transform: translateX(-50%);"></div>
+              <div class="blob" style="background: #5848d5; top: -80px; right: -100px;"></div>
+              <div class="blob" style="background: #7700ff; bottom: -100px; left: -120px;"></div>
+              <div class="blob" style="background: #9a4dff; bottom: 150px; right: -90px;"></div>
+              <div class="blob" style="background: #00c3ff; top: 30%; left: -150px;"></div>
+            </div>
           </div>
       
           <div class="right-panel">
-            <h2>Login</h2>
-            <input type="text" placeholder="Usuário" class="modal-input">
-            <input type="password" placeholder="Senha" class="modal-input">
+            <h2>Cadastro</h2>
+            <input type="text" placeholder="Nome" class="modal-input" />
+            <input type="email" placeholder="Email" class="modal-input" />
+            <input type="password" placeholder="Senha" class="modal-input" />
+            <input type="password" placeholder="Confirmar Senha" class="modal-input" />
       
-            <div class="remember">
-              <input type="checkbox" id="keep-logged">
-              <label for="keep-logged">Manter-me conectado</label>
-            </div>
+           
       
-            <button class="modal-btn">Entrar</button>
-            <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+            <button class="modal-btn">Cadastrar</button>
+            
       
             <div class="social-login">
-              <p>Ou entre com</p>
+              <p>Ou cadastre-se com</p>
               <div class="social-buttons">
                 <button class="google">G Google</button>
                 <button class="facebook">f Facebook</button>
@@ -105,6 +106,7 @@
           </div>
         </div>
       </div>
+      
       
 
 
@@ -164,6 +166,7 @@ if (event.target === document.getElementById("modalLogin")) {
    document.getElementById("modalLogin").style.display = "none";
 }
 });
+
 
 
 </script>
